@@ -18,27 +18,42 @@ ActiveRecord::Schema.define(version: 20140708231337) do
 
   create_table "boroughs", force: true do |t|
     t.text     "name"
-    t.integer  "population"
+    t.integer  "total_pop"
+    t.integer  "enrollment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "districts", force: true do |t|
-    t.string   "name"
-    t.float    "attendance"
-    t.integer  "enrollment"
+    t.string   "district_title"
+    t.integer  "avg_attendance"
+    t.float    "avg_enrollment"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "borough_id"
   end
 
   create_table "schools", force: true do |t|
+    t.string  "system_code"
     t.string  "name"
-    t.string  "principal"
+    t.string  "managed_by"
+    t.string  "category"
+    t.string  "grades"
+    t.string  "open_date"
     t.text    "address"
-    t.integer "zip_code"
-    t.integer "enrollment"
-    t.text    "website"
+    t.string  "city"
+    t.string  "state"
+    t.integer "zip"
+    t.string  "principal_name"
+    t.string  "district_code"
+    t.string  "pr_overall"
+    t.string  "progress_grade"
+    t.string  "performance_grade"
+    t.string  "env_grade"
+    t.string  "readiness_grade"
+    t.string  "2012_grade"
+    t.string  "2011_grade"
+    t.string  "2010_grade"
     t.integer "district_id"
   end
 
