@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: nyc_schools_app_production
-  username: nyc_schools_app
   password: <%= ENV['NYC_SCHOOLS_APP_DATABASE_PASSWORD'] %>
