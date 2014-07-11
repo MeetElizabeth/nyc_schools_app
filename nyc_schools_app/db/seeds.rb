@@ -98,7 +98,7 @@ school_info = CSV.open( File.join( File.dirname(__FILE__),"school_info/2013_scho
 school_info.each do |schools|
   schools = schools.map {|entry| entry.force_encoding('UTF-8') unless entry.nil? }
   p schools
-  School.create({
+  School.create!({
     system_code: schools[0],
     name: schools[1],
     managed_by: schools[2],
@@ -136,7 +136,7 @@ district_info = CSV.open( File.join( File.dirname(__FILE__),"school_info/distric
 
 district_info.each do |districts|
   p districts
-  District.create({
+  District.create!({
     district_title: districts[0],
     avg_attendance: districts[1],
     avg_enrollment: districts[2],
