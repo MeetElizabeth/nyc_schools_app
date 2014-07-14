@@ -22,12 +22,12 @@
     </header>
 
       <nav class="sixteen columns">
-        <%= link_to('Home', root_path) %> |
-        <%= link_to('About', about_path) %> |
-        <%= link_to('Boroughs', boroughs_path) %> |
-        <%= link_to('Districts', districts_path) %> |
-        <%= link_to('Schools', schools_path) %>
+        <div class="nav one sixteen columns">
+          <%= link_to('Home', root_path) %> |
+          <%= link_to('About', about_path) %>
+        </div>
       </nav>
+
     </header>
 
     <%= yield %>

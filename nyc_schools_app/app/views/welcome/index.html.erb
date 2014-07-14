@@ -1,0 +1,21 @@
+<%= image_tag "map.png", :class => "style_image" %>
+
+<h3> Explore data by... </h3><br>
+
+<nav class="explore sixteen columns">
+  <div class="links"></div>
+
+    <div class="link one-third column alpha">
+      <%= link_to('Boroughs', boroughs_path) %>
+    </div>
+
+    <div class="link one-third column columns">
+      <%= link_to('Districts', districts_path) %>
+    </div>
+
+    <div class="link one-third column omega">
+      <%= link_to('Schools', schools_path) %>
+    </div>
+
+  </div>
+</nav>
