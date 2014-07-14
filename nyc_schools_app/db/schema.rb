@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708231337) do
+ActiveRecord::Schema.define(version: 20140713234104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140708231337) do
     t.float   "ela_pct_lvl3"
     t.float   "ela_pct_lvl4"
     t.integer "borough_id"
+  end
+
+  create_table "pg_search_documents", force: true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "schools", force: true do |t|

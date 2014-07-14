@@ -1,0 +1,93 @@
+body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+subhead {
+  margin-top: 80px;
+}
+
+h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  font-family: "Georgia", serif;
+}
+
+header {
+  margin-top: 35px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  border-bottom: 20px solid black;
+}
+
+nav {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: black;
+}
+
+nav a:hover {
+  color: #A7A9AC;
+}
+
+about {
+  margin: auto;
+  position: absolute;
+  width: 80%;
+  border-bottom: 1px solid black;
+}
+
+.description {
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  padding: 0 0 0 8em;
+  text-align: justify;
+}
+
+.description:first-line {
+  font-weight: 800;
+  font-variant: small-caps;
+}
+
+.description:first-letter {
+  font-size: 8em;
+  line-height: 1em;
+  font-weight: 400;
+  float: left;
+  margin: 0 0 0 -0.1em;
+  padding-right: 0.1em;
+}
+
+.description + .description:first-letter {
+  font-size: 1em;
+  line-height: 1.25em;
+  float: none;
+  margin: 0;
+}
+
+.description + .description:first-line {
+  font-weight: 400;
+  font-variant: normal;
+}

@@ -1,0 +1,5 @@
+<h2>Our Boroughs</h2>
+
+<% @boroughs.each do |borough| %>
+  <%= link_to(borough.name, borough_path(borough)) %><br>
+<% end %>

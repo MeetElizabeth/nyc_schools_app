@@ -1,14 +1,36 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
-  <title>NycSchoolsApp</title>
+  <title>ReportCard</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="../../app/assets/stylesheets/reset.css">
+  <link rel="stylesheet" href="../../app/assets/stylesheets/skeleton.css">
+  <link rel="stylesheet" href="../../app/assets/stylesheets/style.css">
+
+  <meta name="viewport" content="width=device=width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
+  <div class="container">
+    <subhead class="sixteen columns">
+      <h4 class="sixteen columns">NYC</h4>
+    </subhead>
+    <header class="sixteen columns">
+      <h1 class="sixteen columns">ReportCard</h1>
+    </header>
 
-<%= yield %>
+      <nav class="sixteen columns">
+        <%= link_to('Home', root_path) %> |
+        <%= link_to('About', about_path) %> |
+        <%= link_to('Boroughs', boroughs_path) %> |
+        <%= link_to('Districts', districts_path) %> |
+        <%= link_to('Schools', schools_path) %>
+      </nav>
+    </header>
 
+    <%= yield %>
+  </div>
 </body>
 </html>

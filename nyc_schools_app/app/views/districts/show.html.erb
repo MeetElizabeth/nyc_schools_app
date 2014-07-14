@@ -1,0 +1,50 @@
+<br><br><br><hr><h1>District <%= @district.district_title %></h1>
+<b>Year-To-Date Attendance (Average): </b> <%= @district.avg_attendance %>%<br><br>
+<b>Year-To-Date Enrollment (Average):</b> <%= @district.avg_enrollment %> Students<br><br>
+
+<% unless @district.math_num_tested.nil? %>
+<hr><br>
+  <div class="cc test results">
+    <h2>2013 Common Core Test Results</h2><br>
+    <b>Mathematics Test Results</b><br>
+    Grades 3-8<br><br>
+
+    <b>Total Students Tested:</b> <%= @district.math_num_tested %> Students <br><br>
+    <table border="1" style="width:300px">
+      <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+      </tr>
+      <tr>
+        <td><%= @district.math_pct_lvl1 %>%</td>
+        <td><%= @district.math_pct_lvl2 %>%</td>
+        <td><%= @district.math_pct_lvl3 %>%</td>
+        <td><%= @district.math_pct_lvl4 %>%</td>
+      </tr>
+    </table><br><br><br>
+
+    <b>English Language Arts (ELA)</b><br>
+    Grades 3-8<br><br>
+
+    <b>Total Students Tested:</b> <%= @district.ela_num_tested %> Students <br><br>
+    <table border="1" style="width:300px">
+      <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+      </tr>
+      <tr>
+        <td><%= @district.ela_pct_lvl1 %>%</td>
+        <td><%= @district.ela_pct_lvl2 %>%</td>
+        <td><%= @district.ela_pct_lvl3 %>%</td>
+        <td><%= @district.ela_pct_lvl4 %>%</td>
+      </tr>
+    </table><br><br><br>
+  </div>
+<% end %>
+
+<br><br><br>
+<%= link_to('Back to All Districts', districts_path) %>

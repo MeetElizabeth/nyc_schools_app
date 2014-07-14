@@ -1,0 +1,5 @@
+<h2>Our Districts</h2>
+
+<% @districts.each do |district| %>
+  <%= link_to(district.district_title, district_path(district)) %><br>
+<% end %>

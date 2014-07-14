@@ -1,0 +1,24 @@
+<h2>Our Schools</h2>
+
+<b>Find your school by:</b>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name %>
+  <%= f.search_field :name_cont %><br>
+  <%= f.label :system_code %>
+  <%= f.search_field :system_code_cont %><br>
+  <%= f.label :managed_by %>
+  <%= f.search_field :managed_by_cont %><br>
+  <%= f.label :category %>
+  <%= f.search_field :category_cont %><br>
+  <%= f.label :city %>
+  <%= f.search_field :city_cont %><br>
+  <%= f.submit %>
+<% end %>
+
+<br><br>
+<hr>
+
+<% @schools.each do |school| %>
+  <%= school.system_code %>
+  <%= link_to(school.name, school_path(school)) %><br><hr>
+<% end %>

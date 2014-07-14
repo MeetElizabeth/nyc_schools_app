@@ -1,0 +1,45 @@
+<br><br><br><hr><h1><%= @borough.name %></h1>
+<b>Total Population:</b> <%= @borough.total_pop %><br><br>
+<b>Total Enrollment:</b> <%= @borough.enrollment %> Students<br><br>
+<hr><br>
+
+<h2>2013 Common Core Test Results</h2><br>
+<b>Mathematics Test Results</b><br>
+Grades 3-8<br><br>
+
+<b>Total Students Tested:</b> <%= @borough.math_num_tested %> Students <br><br>
+<table border="1" style="width:300px">
+  <tr>
+    <th>Level 1</th>
+    <th>Level 2</th>
+    <th>Level 3</th>
+    <th>Level 4</th>
+  </tr>
+  <tr>
+    <td><%= @borough.math_pct_lvl1 %>%</td>
+    <td><%= @borough.math_pct_lvl2 %>%</td>
+    <td><%= @borough.math_pct_lvl3 %>%</td>
+    <td><%= @borough.math_pct_lvl4 %>%</td>
+  </tr>
+</table><br><br><br>
+
+<b>English Language Arts (ELA)</b><br>
+Grades 3-8<br><br>
+
+<b>Total Students Tested:</b> <%= @borough.ela_num_tested %> Students <br><br>
+<table border="1" style="width:300px">
+  <tr>
+    <th>Level 1</th>
+    <th>Level 2</th>
+    <th>Level 3</th>
+    <th>Level 4</th>
+  </tr>
+  <tr>
+    <td><%= @borough.ela_pct_lvl1 %>%</td>
+    <td><%= @borough.ela_pct_lvl2 %>%</td>
+    <td><%= @borough.ela_pct_lvl3 %>%</td>
+    <td><%= @borough.ela_pct_lvl4 %>%</td>
+  </tr>
+</table><br><br><br>
+
+<%= link_to('Back to All Boroughs', boroughs_path) %>
