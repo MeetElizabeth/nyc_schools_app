@@ -1,13 +1,18 @@
-<br><br><br><hr><h1><%= @borough.name %></h1>
-<b>Total Population:</b> <%= @borough.total_pop %><br><br>
-<b>Total Enrollment:</b> <%= @borough.enrollment %> Students<br><br>
-<hr><br>
+<%= link_to('Back to All Boroughs', boroughs_path) %>
 
-<h2>2013 Common Core Test Results</h2><br>
-<b>Mathematics Test Results</b><br>
-Grades 3-8<br><br>
+<h2><%= @borough.name %></h2>
 
-<b>Total Students Tested:</b> <%= @borough.math_num_tested %> Students <br><br>
+<div class="category sixteen columns">
+  <h3>Total Population :<%= @borough.total_pop %></h3>
+  <h3>Total Enrollment: <%= @borough.enrollment %> Students</h3>
+</div>
+
+
+<h4>2013 Common Core Test Results</h4>
+<h6>Mathematics Test Results</h6>
+<h6>Grades 3-8</h6>
+
+<h3>Total Students Tested: <%= @borough.math_num_tested %> Students</h3>
 <table border="1" style="width:300px">
   <tr>
     <th>Level 1</th>
@@ -21,12 +26,12 @@ Grades 3-8<br><br>
     <td><%= @borough.math_pct_lvl3 %>%</td>
     <td><%= @borough.math_pct_lvl4 %>%</td>
   </tr>
-</table><br><br><br>
+</table>
 
-<b>English Language Arts (ELA)</b><br>
-Grades 3-8<br><br>
+<h6>English Language Arts (ELA)</h6>
+<h6>Grades 3-8</h6>
 
-<b>Total Students Tested:</b> <%= @borough.ela_num_tested %> Students <br><br>
+<h3>Total Students Tested: <%= @borough.ela_num_tested %> Students</h3>
 <table border="1" style="width:300px">
   <tr>
     <th>Level 1</th>
@@ -40,6 +45,4 @@ Grades 3-8<br><br>
     <td><%= @borough.ela_pct_lvl3 %>%</td>
     <td><%= @borough.ela_pct_lvl4 %>%</td>
   </tr>
-</table><br><br><br>
-
-<%= link_to('Back to All Boroughs', boroughs_path) %>
+</table>

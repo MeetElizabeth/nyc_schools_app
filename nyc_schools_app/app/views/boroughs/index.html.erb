@@ -1,5 +1,5 @@
-<h2>Our Boroughs</h2>
-
-<% @boroughs.each do |borough| %>
-  <%= link_to(borough.name, borough_path(borough)) %><br>
-<% end %>
+<div class="boroughs sixteen columns">
+    <% @boroughs.each do |borough| %>
+          <h2><%= link_to(borough.name, borough_path(borough)) %><br></h2>
+    <% end %>
+</div>

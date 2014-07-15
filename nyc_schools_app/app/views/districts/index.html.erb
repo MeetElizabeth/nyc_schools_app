@@ -1,5 +1,7 @@
-<h2>Our Districts</h2>
-
-<% @districts.each do |district| %>
-  <%= link_to(district.district_title, district_path(district)) %><br>
-<% end %>
+<div class="districts sixteen columns">
+  <% @districts.each do |district| %>
+    <div class="district three columns">
+      <%= link_to(district.district_title, district_path(district)) %><br>
+    </div>
+  <% end %>
+</div>

@@ -50,12 +50,11 @@ nav a:hover {
   color: #A7A9AC;
 }
 
-about {
+.about {
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
-  width: 80%;
-  border-bottom: 1px solid black;
+  vertical-align: center;
+  padding-top: 30px;
 }
 
 .description {
@@ -98,6 +97,7 @@ about {
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -115,7 +115,129 @@ h3 {
 .link {
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.3em;
+  font-size: 1.8em;
   vertical-align: center;
   text-align: center;
+}
+
+.link a:hover {
+  border-bottom: 5px solid #A7A9AC;
+}
+
+h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+.boroughs a {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  color: black;
+}
+
+.boroughs a:hover {
+  color: #A7A9AC;
+  border-bottom: 5px solid #A7A9AC;
+}
+
+.districts {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  text-align: center;
+}
+
+.districts a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 35px;
+}
+
+.districts a:hover {
+  color: #A7A9AC;
+  border-bottom: 5px solid #A7A9AC;
+}
+
+.searchform {
+  border: 0px;
+  padding: 10px;
+  vertical-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 5px solid black;
+}
+
+.search {
+  padding: 20px 0 20px 0;
+}
+
+h6 {
+  font-size: 1.3em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  text-align: center;
+}
+
+.submit {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #fff;
+  border: 1px solid black;
+  height: 40px;
+  width: 100px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.schools {
+ margin-left: auto;
+ margin-right: auto;
+ vertical-align: center;
+ text-align: center;
+}
+
+.code {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+}
+
+.name a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.name a:hover {
+  color: #A7A9AC;
+  border-bottom: 5px solid #A7A9AC;
+}
+
+.category {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding-bottom: 20px;
+}
+
+table, th, td {
+  margin-top: 50px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }

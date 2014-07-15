@@ -1,24 +1,29 @@
-<br><br><br><hr><h1><%= @school.name %></h1>
-<%= @school.system_code %><br><br>
-<b>Managed By:</b>   <%= @school.managed_by %> <br>
-<b>Category: </b>   <%= @school.category %><br>
-<b>Grades Taught:</b>   <%= @school.grades %><br><br>
-<hr>
-<b>Opened In:</b>   <%= @school.open_date %><br>
-<b>Principal:</b>   <%= @school.principal_name %><br><br>
+<%= link_to('Back to All Schools', schools_path) %>
 
-<b>Address:</b><br>
-<%= @school.address %><br>
-<%= @school.city %><br>
-<%= @school.state %><br>
-<%= @school.zip %>
+<h2><%= @school.name %></h2>
+
+
+<h4><%= @school.system_code %></h4>
+<h3>Managed By:   <%= @school.managed_by %></h3>
+<h3>Category:    <%= @school.category %></h3>
+<h3>Grades Taught:   <%= @school.grades %></h3>
+<h3>Opened In:   <%= @school.open_date %></h3>
+<h3>Principal:   <%= @school.principal_name %></h3><br>
+
+<h6>Address:</h6>
+<h3><%= @school.address %>,
+<%= @school.city %>,
+<%= @school.state %> -
+<%= @school.zip %></h3>
+
+<hr>
 
 <% unless @school.pr_overall.nil? %>
-<hr><br>
+
   <div class="progress reports">
-    <h2>School Progress Reports</h2>
+    <h4>School Progress Reports</h4>
     <p>Progress Reports help parents, teachers, principals, and school communities understand schools' strengths and weaknesses. Progress Reports grade each school with an A, B, C, D, or F and are based student progress (60%), student performance (25%), and school environment (15%). Scores are based on comparing results from one school to a peer group of up to 40 schools with the most similar student population and to all schools citywide.</p>
-    <h2>2012-2013 Overall Grade: <%= @school.pr_overall %></h2>
+    <h6>2012-2013 Overall Grade: <%= @school.pr_overall %></h6>
 
     <table border="1" style="width:300px">
       <tr>
@@ -33,29 +38,28 @@
         <td><%= @school.env_grade %></td>
         <td><%= @school.readiness_grade %></td>
       </tr>
-    </table><br><br>
+    </table>
 
-    <b>2012 Overall Grade:</b> <%= @school['2012_grade'] %><br>
-    <b>2011 Overall Grade:</b> <%= @school['2011_grade'] %><br>
-    <b>2010 Overall Grade:</b> <%= @school['2010_grade'] %><br><br><br>
+    <h6>2012 Overall Grade: <%= @school['2012_grade'] %></h6>
+    <h6>2011 Overall Grade: <%= @school['2011_grade'] %></h6>
+    <h6>2010 Overall Grade: <%= @school['2010_grade'] %></h6>
   </div>
 <% end %>
 
 <% unless @school.math_num_tested.nil? %>
-<hr><br>
-  <div class="cc test results">
-    <h2>2013 Common Core Test Results</h2>
-    <p>As part of New York City public schools’ work to prepare students for future opportunities, students have been increasingly challenged by the new Common Core standards. These learning standards describe what all students need to know and be able to do to graduate from high school ready for college and careers.<br><br>
 
-    In spring 2013, for the first time, the 3rd-to-8th-grade State tests began to assess the important skills students are learning through the Common Core. Unlike past year’s tests, the 2013 State Common Core tests focused more on the skills students need to become ready for college and a good job.<br><br>
+    <h4>2013 Common Core Test Results</h4>
+    <p>As part of New York City public schools’ work to prepare students for future opportunities, students have been increasingly challenged by the new Common Core standards. These learning standards describe what all students need to know and be able to do to graduate from high school ready for college and careers.
+
+    In spring 2013, for the first time, the 3rd-to-8th-grade State tests began to assess the important skills students are learning through the Common Core. Unlike past year’s tests, the 2013 State Common Core tests focused more on the skills students need to become ready for college and a good job.
 
     This year’s tests were harder than tests given in past years so the scores do not mean the same thing. Also, these tests are new, which means they do not measure progress. A lower score simply means that there are areas to focus on and improve. Schools are continuing to work with students on those areas.</p>
 
-    <br><br>
-    <h2>Mathematics Test Results</h2>
-    Grades 3-8<br><br>
 
-    <b>Total Students Tested:</b> <%= @school.math_num_tested %> Students <br><br>
+    <h6>Mathematics Test Results</h6>
+    <h6>Grades 3-8</h6>
+
+    <h3>Total Students Tested: <%= @school.math_num_tested %> Students</h3>
     <table border="1" style="width:300px">
       <tr>
         <th>Level 1</th>
@@ -69,12 +73,12 @@
         <td><%= @school.math_pct_lvl3 %>%</td>
         <td><%= @school.math_pct_lvl4 %>%</td>
       </tr>
-    </table><br><br><br>
+    </table>
 
-    <h2>English Language Arts (ELA)</h2>
-    Grades 3-8<br><br>
+    <h6>English Language Arts (ELA)</h6>
+    <h6>Grades 3-8</h6>
 
-    <b>Total Students Tested:</b> <%= @school.ela_num_tested %> Students <br><br>
+    <h3>Total Students Tested: <%= @school.ela_num_tested %> Students</h3>
     <table border="1" style="width:300px">
       <tr>
         <th>Level 1</th>
@@ -88,8 +92,6 @@
         <td><%= @school.ela_pct_lvl3 %>%</td>
         <td><%= @school.ela_pct_lvl4 %>%</td>
       </tr>
-    </table><br><br><br>
+    </table>
   </div>
 <% end %>
-<br><br><br>
-<%= link_to('Back to All Schools', schools_path) %>

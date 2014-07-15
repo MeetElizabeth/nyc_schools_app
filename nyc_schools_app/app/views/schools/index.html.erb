@@ -1,24 +1,40 @@
-<h2>Our Schools</h2>
+<%= image_tag "search-01.png", :class => "style_image" %>
+<h4>Find your school by:</h4>
 
-<b>Find your school by:</b>
-<%= search_form_for @q do |f| %>
-  <%= f.label :name %>
-  <%= f.search_field :name_cont %><br>
-  <%= f.label :system_code %>
-  <%= f.search_field :system_code_cont %><br>
-  <%= f.label :managed_by %>
-  <%= f.search_field :managed_by_cont %><br>
-  <%= f.label :category %>
-  <%= f.search_field :category_cont %><br>
-  <%= f.label :city %>
-  <%= f.search_field :city_cont %><br>
-  <%= f.submit %>
-<% end %>
+<div class="searchform sixteen columns">
+  <%= search_form_for @q do |f| %>
+  <div class="search five columns">
+    <h6><%= f.label :name %></h6>
+    <%= f.search_field :name_cont %><br>
+  </div>
+  <div class="search five columns">
+    <h6><%= f.label :system_code %></h6>
+    <%= f.search_field :system_code_cont %><br>
+  </div>
+  <div class="search five columns">
+    <h6><%= f.label :managed_by %></h6>
+    <%= f.search_field :managed_by_cont %><br>
+  </div>
+  <div class="search five columns">
+    <h6><%= f.label :category %></h6>
+    <%= f.search_field :category_cont %><br>
+  </div>
+  <div class="search five columns">
+    <h6><%= f.label :city %></h6>
+    <%= f.search_field :city_cont %><br>
+  </div>
+    <%= f.submit 'Search', :class => 'submit' %>
+  <% end %>
+</div>
 
-<br><br>
-<hr>
 
-<% @schools.each do |school| %>
-  <%= school.system_code %>
-  <%= link_to(school.name, school_path(school)) %><br><hr>
-<% end %>
+<div class="schools sixteen columns">
+  <% @schools.each do |school| %>
+    <div class="code sixteen columns">
+      <%= school.system_code %>
+    </div>
+    <div class="name sixteen columns">
+      <%= link_to(school.name, school_path(school)) %><br>
+    </div>
+  <% end %>
+<div>
