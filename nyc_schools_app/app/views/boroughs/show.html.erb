@@ -7,42 +7,4 @@
   <h3>Total Enrollment: <%= @borough.enrollment %> Students</h3>
 </div>
 
-
-<h4>2013 Common Core Test Results</h4>
-<h6>Mathematics Test Results</h6>
-<h6>Grades 3-8</h6>
-
-<h3>Total Students Tested: <%= @borough.math_num_tested %> Students</h3>
-<table border="1" style="width:300px">
-  <tr>
-    <th>Level 1</th>
-    <th>Level 2</th>
-    <th>Level 3</th>
-    <th>Level 4</th>
-  </tr>
-  <tr>
-    <td><%= @borough.math_pct_lvl1 %>%</td>
-    <td><%= @borough.math_pct_lvl2 %>%</td>
-    <td><%= @borough.math_pct_lvl3 %>%</td>
-    <td><%= @borough.math_pct_lvl4 %>%</td>
-  </tr>
-</table>
-
-<h6>English Language Arts (ELA)</h6>
-<h6>Grades 3-8</h6>
-
-<h3>Total Students Tested: <%= @borough.ela_num_tested %> Students</h3>
-<table border="1" style="width:300px">
-  <tr>
-    <th>Level 1</th>
-    <th>Level 2</th>
-    <th>Level 3</th>
-    <th>Level 4</th>
-  </tr>
-  <tr>
-    <td><%= @borough.ela_pct_lvl1 %>%</td>
-    <td><%= @borough.ela_pct_lvl2 %>%</td>
-    <td><%= @borough.ela_pct_lvl3 %>%</td>
-    <td><%= @borough.ela_pct_lvl4 %>%</td>
-  </tr>
-</table>
+<%= render partial: 'layouts/common_core', locals: {entity: @borough} %>

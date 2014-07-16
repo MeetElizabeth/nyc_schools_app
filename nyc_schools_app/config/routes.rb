@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   get '/about'    =>    'welcome#about', as: 'about'
 
 
-  resources :boroughs, :districts, :schools
+  resources :boroughs, only: [:index, :show]
+  resources :districts, only: [:index, :show]
+  resources :schools, only: [:index, :show]
+  
 end

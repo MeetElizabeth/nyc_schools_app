@@ -8,45 +8,5 @@
 </div>
 
 <% unless @district.math_num_tested.nil? %>
-
-    <h4>2013 Common Core Test Results</h4>
-    <h6>Mathematics Test Results</h6>
-    <h6>Grades 3-8</h6>
-
-    <h3>Total Students Tested: <%= @district.math_num_tested %> Students</h3>
-
-    <table border="1" style="width:300px">
-      <tr>
-        <th>Level 1</th>
-        <th>Level 2</th>
-        <th>Level 3</th>
-        <th>Level 4</th>
-      </tr>
-      <tr>
-        <td><%= @district.math_pct_lvl1 %>%</td>
-        <td><%= @district.math_pct_lvl2 %>%</td>
-        <td><%= @district.math_pct_lvl3 %>%</td>
-        <td><%= @district.math_pct_lvl4 %>%</td>
-      </tr>
-    </table><br>
-
-    <h6>English Language Arts (ELA)</h6>
-    <h6>Grades 3-8</h6>
-
-    <h3>Total Students Tested: <%= @district.ela_num_tested %> Students</h3>
-    <table border="1" style="width:300px">
-      <tr>
-        <th>Level 1</th>
-        <th>Level 2</th>
-        <th>Level 3</th>
-        <th>Level 4</th>
-      </tr>
-      <tr>
-        <td><%= @district.ela_pct_lvl1 %>%</td>
-        <td><%= @district.ela_pct_lvl2 %>%</td>
-        <td><%= @district.ela_pct_lvl3 %>%</td>
-        <td><%= @district.ela_pct_lvl4 %>%</td>
-      </tr>
-    </table>
-  </div>
+  <%= render partial: 'layouts/common_core', locals: {entity: @district} %>
 <% end %>

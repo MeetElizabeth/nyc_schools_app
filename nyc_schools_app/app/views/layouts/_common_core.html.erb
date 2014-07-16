@@ -1,0 +1,19 @@
+<h4>2013 Common Core Test Results</h4>
+<p>As part of New York City public schools’ work to prepare students for future opportunities, students have been increasingly challenged by the new Common Core standards. These learning standards describe what all students need to know and be able to do to graduate from high school ready for college and careers.
+
+In spring 2013, for the first time, the 3rd-to-8th-grade State tests began to assess the important skills students are learning through the Common Core. Unlike past year’s tests, the 2013 State Common Core tests focused more on the skills students need to become ready for college and a good job.
+
+This year’s tests were harder than tests given in past years so the scores do not mean the same thing. Also, these tests are new, which means they do not measure progress. A lower score simply means that there are areas to focus on and improve. Schools are continuing to work with students on those areas.</p>
+
+
+<h6>Mathematics Test Results</h6>
+<h6>Grades 3-8</h6>
+
+<h3>Total Students Tested: <%= entity.math_num_tested %> Students</h3>
+<%= render partial: 'layouts/test_scores_table', locals: {test_scores: entity.math_pct_lvl} %>
+
+<h6>English Language Arts (ELA)</h6>
+<h6>Grades 3-8</h6>
+
+<h3>Total Students Tested: <%= entity.ela_num_tested %> Students</h3>
+<%= render partial: 'layouts/test_scores_table', locals: {test_scores: entity.ela_pct_lvl} %>

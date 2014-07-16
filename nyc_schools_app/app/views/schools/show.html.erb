@@ -4,27 +4,27 @@
 
 
 <h4><%= @school.system_code %></h4>
-<h3>Managed By:   <%= @school.managed_by %></h3>
-<h3>Category:    <%= @school.category %></h3>
+<h3>Managed By:      <%= @school.managed_by %></h3>
+<h3>Category:        <%= @school.category %></h3>
 <h3>Grades Taught:   <%= @school.grades %></h3>
-<h3>Opened In:   <%= @school.open_date %></h3>
-<h3>Principal:   <%= @school.principal_name %></h3><br>
+<h3>Opened In:       <%= @school.open_date %></h3>
+<h3>Principal:       <%= @school.principal_name %></h3>
 
 <h6>Address:</h6>
-<h3><%= @school.address %>,
-<%= @school.city %>,
-<%= @school.state %> -
-<%= @school.zip %></h3>
+<h3>
+    <%= @school.address %>,
+    <%= @school.city %>,
+    <%= @school.state %> -
+    <%= @school.zip %>
+</h3>
 
 <hr>
 
 <% unless @school.pr_overall.nil? %>
-
   <div class="progress reports">
     <h4>School Progress Reports</h4>
     <p>Progress Reports help parents, teachers, principals, and school communities understand schools' strengths and weaknesses. Progress Reports grade each school with an A, B, C, D, or F and are based student progress (60%), student performance (25%), and school environment (15%). Scores are based on comparing results from one school to a peer group of up to 40 schools with the most similar student population and to all schools citywide.</p>
     <h6>2012-2013 Overall Grade: <%= @school.pr_overall %></h6>
-
     <table border="1" style="width:300px">
       <tr>
         <th>Progress</th>
@@ -39,59 +39,12 @@
         <td><%= @school.readiness_grade %></td>
       </tr>
     </table>
-
-    <h6>2012 Overall Grade: <%= @school['2012_grade'] %></h6>
-    <h6>2011 Overall Grade: <%= @school['2011_grade'] %></h6>
-    <h6>2010 Overall Grade: <%= @school['2010_grade'] %></h6>
+    <% for i in 0..2 %>
+      <h6><%=2010+i%> Overall Grade: <%= @school.overall_grades[i] %> </h6>
+    <% end %>
   </div>
 <% end %>
 
 <% unless @school.math_num_tested.nil? %>
-
-    <h4>2013 Common Core Test Results</h4>
-    <p>As part of New York City public schools’ work to prepare students for future opportunities, students have been increasingly challenged by the new Common Core standards. These learning standards describe what all students need to know and be able to do to graduate from high school ready for college and careers.
-
-    In spring 2013, for the first time, the 3rd-to-8th-grade State tests began to assess the important skills students are learning through the Common Core. Unlike past year’s tests, the 2013 State Common Core tests focused more on the skills students need to become ready for college and a good job.
-
-    This year’s tests were harder than tests given in past years so the scores do not mean the same thing. Also, these tests are new, which means they do not measure progress. A lower score simply means that there are areas to focus on and improve. Schools are continuing to work with students on those areas.</p>
-
-
-    <h6>Mathematics Test Results</h6>
-    <h6>Grades 3-8</h6>
-
-    <h3>Total Students Tested: <%= @school.math_num_tested %> Students</h3>
-    <table border="1" style="width:300px">
-      <tr>
-        <th>Level 1</th>
-        <th>Level 2</th>
-        <th>Level 3</th>
-        <th>Level 4</th>
-      </tr>
-      <tr>
-        <td><%= @school.math_pct_lvl1 %>%</td>
-        <td><%= @school.math_pct_lvl2 %>%</td>
-        <td><%= @school.math_pct_lvl3 %>%</td>
-        <td><%= @school.math_pct_lvl4 %>%</td>
-      </tr>
-    </table>
-
-    <h6>English Language Arts (ELA)</h6>
-    <h6>Grades 3-8</h6>
-
-    <h3>Total Students Tested: <%= @school.ela_num_tested %> Students</h3>
-    <table border="1" style="width:300px">
-      <tr>
-        <th>Level 1</th>
-        <th>Level 2</th>
-        <th>Level 3</th>
-        <th>Level 4</th>
-      </tr>
-      <tr>
-        <td><%= @school.ela_pct_lvl1 %>%</td>
-        <td><%= @school.ela_pct_lvl2 %>%</td>
-        <td><%= @school.ela_pct_lvl3 %>%</td>
-        <td><%= @school.ela_pct_lvl4 %>%</td>
-      </tr>
-    </table>
-  </div>
+    <%= render partial: 'layouts/common_core', locals: {entity: @school} %>
 <% end %>
