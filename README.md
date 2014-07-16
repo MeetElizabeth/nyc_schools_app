@@ -13,7 +13,7 @@ A tool created to help provide some clarity for the New York City school system 
 [LucidChart](https://www.lucidchart.com/documents/embeddedchart/2836e98e-1fe7-424d-a9ae-36fbdb84ef94)
 
 #### Heroku-hosted Site:
-[NYC ReportCard](http://sheltered-refuge-1889.herokuapp.com/)
+[NYC ReportCard](http://nyc-reportcard-app.herokuapp.com/)
 
 ---
 #### Data Used in Project:
